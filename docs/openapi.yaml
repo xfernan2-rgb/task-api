@@ -16,8 +16,17 @@ paths:
   /tasks:
     get:
       summary: List all tasks
+      description: Returns all tasks, Optional "completed" query to return only completed or not completed tasks 
       tags:
         - Tasks
+      parameters:
+        - name: completed
+          required: false
+          in: query
+          description: filters tasks by completion state
+          schema: 
+            type: boolean
+          
       responses:
         '200':
           description: OK
