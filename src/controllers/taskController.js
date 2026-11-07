@@ -3,7 +3,7 @@ import * as taskService from '../services/taskService.js';
 export async function getTasks(req, res, next) {
   const {completed} = req.query;
   const filters = {};
-  if (complete !== undefined) {
+  if (completed !== undefined) {
     filters.completed = completed === 'true';
   }
 
